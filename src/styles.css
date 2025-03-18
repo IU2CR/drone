@@ -1,0 +1,53 @@
+nav {
+    position: fixed; /* Fixes navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 1000; /* Ensures navbar stays above other content */
+  }
+  
+  /* Style the unordered list */
+  nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  /* Style the list items */
+  nav ul li {
+    display: inline;
+  }
+  
+  /* Style the links */
+  nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 15px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight transparent background */
+    border-radius: 8px; /* Rounds edges */
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3); /* 🔥 Adds button shadow */
+  }
+  
+  /* 🔥 Hover effect for depth */
+  nav ul li a:hover {
+    background-color: #f28136;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.5); /* Deeper shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+  }
+  
+  /* 🔥 Active link effect */
+  nav ul li a:active {
+    transform: translateY(1px); /* Slight press-down effect */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2); /* Lighter shadow when clicked */
+  }

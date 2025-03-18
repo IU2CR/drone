@@ -1,0 +1,90 @@
+.about-container {
+    display: flex;
+    height: 100vh; /* Full screen height */
+  }
+  
+  .about-left {
+    width: 95%;
+    background-color: #f8f9fa; /* Light gray */
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .about-text {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .about-text hr {
+    width: 50%;
+    border: 1px solid #333;
+    margin: 20px auto;
+  }
+  
+  .about-right {
+    width: 5%;
+    background-color: #f28136; /* Orange */
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+ 
+/* Image with Overlay Effect */
+.about-image-container {
+    position: absolute; /* Puts the image on top */
+    top: 40%; /* Center vertically */
+    right: 5%; /* Adjusts horizontal position */
+    transform: translateY(-50%); /* Centers image */
+    z-index: 2; /* Higher than text */
+  }
+  
+  /* Image Styling */
+  .about-image {
+    width: 400px;
+    border: 10px solid #333; /* Black frame */
+    border-radius: 10px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6); /* Depth effect */
+  }
+  /* Hover Effect for More Depth */
+  .about-image:hover {
+    transform: scale(1.05);
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8);
+  }
+  /* Text Overlay */
+.about-text {
+    position: absolute;
+    word-wrap: break-word; /* Ensures long words wrap properly */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+    width: 70%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+  }
+  
+  /* Left Line before "About Us" */
+  .about-text h2 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 300px; /* Adds space below "About Us" */
+  }
+  
+  .line {
+    width: 5px;
+    height: 30px;
+    background-color: orange;
+    margin-right: 10px;
+  }
