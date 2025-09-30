@@ -1,5 +1,6 @@
 import "./Services.css";
 import RevolutQR from "../components/RevolutQR";
+import serviceImage from "../public/images/services.jpg";
 
 const Services = () => {
   return (
@@ -15,7 +16,8 @@ const Services = () => {
       <div className="services-right">
          {/* services Image in Middle Right with Depth Effect */}
          <div className="services-image-container">
-        <img src="/images/services.jpg" alt="services" className="services-image" />
+         <img src={serviceImage} alt="services" className="services-image" />
+        
       </div>
       </div>
 

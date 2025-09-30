@@ -4,12 +4,12 @@ import "./Contact.css"; // Import the styles
 const Contact = () => {
   return (
     <div className="contact-container">
-      <h1>Contact Us</h1>
+      <h1><span className="line"></span>Contact Us</h1>
 
       <div className="contact-info">
         <p><strong>Email:</strong> <a href="mailto:rpas4ua@gmail.com">rpas4ua@gmail.com</a></p>
         
-        <p><strong>Phone:</strong> <a href="tel:+447417398997">+447417398997</a></p>
+        <p><strong>Phone:</strong> <a href="tel:+447747812767">+447747812767</a></p>
         
         <p><strong>Address: </strong> 
           <a 
