@@ -1,0 +1,89 @@
+/* Basic Navbar Styles */
+.navbar {
+  display: flex;
+  align-items: center;
+  background: #333;
+  padding: 10px 20px;
+  color: white;
+}
+  
+  /* Logo */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    margin-right: 50px; /* Space between logo and nav links */
+  }
+  
+  /* Ensure it changes color on hover */
+  .logo:hover {
+    color: #f4a261;
+  }
+  
+  /* Desktop Navigation Links */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0; /* Remove auto margins to prevent centering */
+    }
+  
+  .nav-links li {
+    padding: 10px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  .nav-links a:hover {
+    color: #f4a261;
+  }
+  
+  /* Hide Menu Icon on Large Screens */
+  .menu-icon {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    position: absolute;
+    right: 40px; /* Moves the icon to the left of the scrollbar */
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1100; /* Ensures it appears above everything */
+    }
+  /* Responsive Navigation (Mobile) */
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 60px;
+      left: 5px;
+      width: 100%;
+      background: #444;
+      flex-direction: column;
+      text-align: center;
+      display: none;
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      padding: 15px 5px;
+    }
+    body {
+        scrollbar-width: thin; /* For Firefox */
+    }
+    
+    ::-webkit-scrollbar {
+        width: 5px; /* For Chrome, Safari */
+    }
+  }

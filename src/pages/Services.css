@@ -1,12 +1,26 @@
 .services-container {
-  display: flex;
-  height: 100vh; /* Full screen height */
+  position: relative;
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("../pictures/services.jpg") no-repeat center center/cover;
+    padding: 10px; /* Add padding to prevent overflow */
+    box-sizing: border-box; /* Ensure padding doesn’t affect size */
 }
+
 .revolut-qr-container {
   position: absolute;
-  left: 15%; /* Aligns to the left edge */
+  left: 15%; /* Aligns to the left */
   top: 50%;
+  margin: 30px auto 0;
   transform: translateY(-50%); /* Centers it vertically */
+  z-index: 10; /* Ensures it's on top */
+  background: rgba(0, 0, 0, 0.7); /* Optional: Background for better visibility */
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%; /* Adjust width for mobile */
+  max-width: 350px; /* Prevents being too wide */
 }
 .services-left {
   width: 95%;
@@ -16,12 +30,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
 }
 
 .services-text {
+  position: relative;
+  z-index: 2; /* Places it above the background */
+  color: white;
   text-align: center;
-  font-size: 1.1rem;
+  margin: 50px auto 0;
+  width: 80%;
+  max-width: 900px;
+  font-size: 1.2rem;
   line-height: 1.6;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
 }
 
 .services-text hr {
@@ -53,10 +78,13 @@
 
 /* Image Styling */
 .services-image {
-  width: 400px;
+  width: 100%;
+  height: 100%;
   border: 10px solid #333; /* Black frame */
   border-radius: 10px;
   box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6); /* Depth effect */
+  object-fit: cover;
+  z-index: -1; /* Send image behind text */
 }
 /* Hover Effect for More Depth */
 .services-image:hover {
@@ -163,4 +191,45 @@
     height: 30px;
     background-color: orange;
     margin-right: 10px;
+  }
+
+  /* Styling for mobile width*/
+  @media screen and (max-width: 768px) {
+    .services-container {
+      flex-direction: column;
+      padding: 20px;
+      height: auto;
+    }
+  
+    .services-text {
+      position: static;
+      transform: none;
+      width: 90%;
+      margin-top: 20px;
+      text-align: center;
+      font-size: 1rem;
+    }
+  
+    .services-image-container {
+      position: static;
+      transform: none;
+      margin-top: 20px;
+    }
+  
+    .services-image {
+      width: 80vw;
+      max-width: 300px;
+      margin: 0 auto;
+    }
+  
+    .revolut-qr-container {
+      position: static;
+      transform: none;
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    .services-right {
+      display: none; /* Hide orange bar if you want on mobile */
+    }
   }

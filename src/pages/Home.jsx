@@ -45,6 +45,9 @@ const Home = () => {
           </a>
           <span className="news-source">— Forbes, Feb 18, 2025, 08:31am EST</span>
         </motion.div>
+        <div className="home-text">
+        <p> - Drone For UA is a small but dedicated fundraising initiative focused on supporting Ukraine’s defense through drone production. We raise funds to equip Ukrainian forces with advanced UAV technology for reconnaissance, defense, and humanitarian missions.</p>
+        </div>
       </div>
     </div>
   );

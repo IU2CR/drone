@@ -1,6 +1,6 @@
 import "./Services.css";
 import RevolutQR from "../components/RevolutQR";
-import serviceImage from "../public/images/services.jpg";
+
 
 const Services = () => {
   return (
@@ -16,16 +16,16 @@ const Services = () => {
       <div className="services-right">
          {/* services Image in Middle Right with Depth Effect */}
          <div className="services-image-container">
-         <img src={serviceImage} alt="services" className="services-image" />
+        
         
       </div>
       </div>
 
       {/* Text Overlay */}
     <div className="services-text">
-      <h2><span className="line"></span>Services</h2>
+      <h2><span className="line"></span>Donate</h2>
       
-      <p> - Our services include crowdfunding campaigns, direct partnerships with drone manufacturers, and supplying essential UAV technology for reconnaissance and tactical operations.</p>
+      <p> - Our services include crowdfunding campaigns, direct partnerships with drone manufacturers, and supplying essential UAV technology for reconnaissance and tactical operations. Every donation helps enhance battlefield awareness, protect lives, and strengthen Ukraine’s resilience.</p>
       
       
     </div>

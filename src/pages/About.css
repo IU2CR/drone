@@ -1,90 +1,217 @@
+
 .about-container {
-    display: flex;
-    height: 100vh; /* Full screen height */
+  display: flex;
+         height: 100vh; /* Full screen height */
+         
   }
+     /*     @media */
+  @media screen and (max-width: 768px) {
+      
+      .about-image-container {
+          position: relative; /* Reset positioning for natural flow */
+          flex-direction: column; /* Stack images vertically */
+          align-items: center; /* Center them horizontally */
+          justify-content: center;
+          margin-top: 60px; /* Add space above images if needed */
+          transform: none; /* Remove transform that centers vertically */
+          top: 50%;
+          right: auto;
+          z-index: 10;
+          
+      }
+      .about-image {
+          
+          width: 80vw; /* 80% of viewport width */
+          max-width: 250px; /* Optional: set a max size */
+          z-index: 1;
+          
+      }
+      .about-text {
+          position: static; /* Allow it to follow normal flow */
+          transform: none;
+          width: 90%;
+          margin: 50px auto 0; /* Add margin-top to push it down */
+          text-align: center;
+          z-index: 2;
+          }
+          .image-wrapper {
+              position: relative;
+              z-index: 10; /* Ensure the wrapper stays above the images */
+              
+          }
+          .trigger-wrapper {
+              position: absolute;    /* Keep it absolute for the right positioning */
+              bottom: 8px;   /* Adjust position for small screen */
+              right: 8px;
+              z-index: 99999;            /* Higher z-index to keep it on top */
+              pointer-events: auto;
+          }
+          .hover-trigger {
+              background-color: rgba(0, 0, 0, 0.7);
+              color: white;
+              padding: 10px 15px; /* Increased padding for easier tapping */
+              font-size: 1.5rem; /* Larger text size */
+              border-radius: 50%;
+              cursor: pointer;
+              z-index: 10000; /* Ensure it's above other elements */
+          }
+      
+          .hover-text {
+              position: absolute;
+              bottom:    40px;
+              right: 0;
+              background: rgba(0, 0, 0, 0.8);
+              color: white;
+              padding: 10px;
+              width: 200px;
+              border-radius: 10px;
+              opacity: 0;
+              pointer-events: none;
+              transition: opacity 0.3s ease;
+              z-index: 99999; /* Keep hover text behind trigger */
+          }
+      
+          .trigger-wrapper:hover .hover-text {
+              opacity: 1;
+              pointer-events: auto; /* Enable pointer events on hover */
+          }
+      }
+      /*    end @media */
   
-  .about-left {
-    width: 95%;
-    background-color: #f8f9fa; /* Light gray */
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
+      .about-left {
+          width: 95%;
+          background-color: #f8f9fa; /* Light gray */
+          padding: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      .about-text {
+          text-align: center;
+          font-size: 1.1rem;
+          line-height: 1.6;
+      }
+      
+      .about-text hr {
+          width: 50%;
+          border: 1px solid #333;
+          margin: 20px auto;
+      }
+      
+      .about-right {
+          width: 5%;
+          background-color: #f28136; /* Orange */
+          color: white;
+          padding: 40px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+      }
+     
+  /* Image with Overlay Effect */
+  .about-image-container {
+          position: absolute; /* Puts the image on top */
+          display: flex; /* Aligns images in a row */
+          gap: 20px; /* Adjusts the spacing between images */
+          top: 40%; /* Center vertically */
+          right: 5%; /* Adjusts horizontal position */
+          transform: translateY(-50%); /* Centers image */
+          z-index: 2; /* Higher than text */
+          flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      }
+      
+      /* Image Styling */
+      .about-image {
+          width: 250px;
+          border: 10px solid #333; /* Black frame */
+          border-radius: 10px;
+          box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6); /* Depth effect */
+          z-index: 1;
+      }
+      /* Hover Effect for More Depth */
+      .about-image:hover {
+          transform: scale(2.0);
+          box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8);
+          z-index: 1; /* keep it lower than trigger-wrapper */
+      }
+      /* Text Overlay */
   .about-text {
-    text-align: center;
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
+          position: absolute;
+          word-wrap: break-word; /* Ensures long words wrap properly */
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: white;
+          text-align: left;
+          width: 70%;
+          background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+          padding: 20px;
+          border-radius: 10px;
+          box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+      }
+      
+      /* Left Line before "About Us" */
+      .about-text h2 {
+          font-size: 2rem;
+          display: flex;
+          align-items: center;
+          margin-bottom: 300px; /* Adds space below "About Us" */
+      }
+      
+      .line {
+          width: 5px;
+          height: 30px;
+          background-color: orange;
+          margin-right: 10px;
+      }
+      /* working with images+ text */
+      .image-wrapper {
+          position: relative;
+          display: inline-block;
+          z-index: 1000; /* Ensure it’s above about-image */
+      }
+      .trigger-wrapper {
+          position: absolute;
+          bottom: 8px;
+          right: 8px;
+          z-index: 9999; /* super high to guarantee it's on top */
+          pointer-events: auto; /* just in case it's blocked */
+      }
+      
+      .hover-trigger {
+          background-color: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 5px 10px;
+          font-size: 1rem;
+          border-radius: 50%;
+          cursor: pointer;
+          z-index: 2;
+          
+      }
+      
+      /* Initially hide the text */
+      .hover-text {
+          position: absolute;
+          top: 40px;
+          right: 0;
+          background: rgba(0, 0, 0, 0.8);
+          color: white;
+          padding: 10px;
+          width: 200px;
+          border-radius: 10px;
+          opacity: 0;
+          pointer-events: none;
+          transition: opacity 0.3s ease;
+          z-index: 3;
+      }
+      
+      /* Show text only when hovering over the + icon */
+      .trigger-wrapper:hover .hover-text {
+          opacity: 1;
+          pointer-events: auto;
+      }
   
-  .about-text hr {
-    width: 50%;
-    border: 1px solid #333;
-    margin: 20px auto;
-  }
-  
-  .about-right {
-    width: 5%;
-    background-color: #f28136; /* Orange */
-    color: white;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
- 
-/* Image with Overlay Effect */
-.about-image-container {
-    position: absolute; /* Puts the image on top */
-    top: 40%; /* Center vertically */
-    right: 5%; /* Adjusts horizontal position */
-    transform: translateY(-50%); /* Centers image */
-    z-index: 2; /* Higher than text */
-  }
-  
-  /* Image Styling */
-  .about-image {
-    width: 400px;
-    border: 10px solid #333; /* Black frame */
-    border-radius: 10px;
-    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.6); /* Depth effect */
-  }
-  /* Hover Effect for More Depth */
-  .about-image:hover {
-    transform: scale(1.05);
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.8);
-  }
-  /* Text Overlay */
-.about-text {
-    position: absolute;
-    word-wrap: break-word; /* Ensures long words wrap properly */
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: left;
-    width: 70%;
-    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Left Line before "About Us" */
-  .about-text h2 {
-    font-size: 2rem;
-    display: flex;
-    align-items: center;
-    margin-bottom: 300px; /* Adds space below "About Us" */
-  }
-  
-  .line {
-    width: 5px;
-    height: 30px;
-    background-color: orange;
-    margin-right: 10px;
-  }

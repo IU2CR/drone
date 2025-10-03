@@ -9,9 +9,25 @@
     flex-direction: column;
     gap: 15px; /* Spacing between slogans */
   }
+  .slogan-container p:last-of-type {
+    color: white;
+}
   
-  
-  
+.home-text {
+  position: relative;
+  z-index: 2; /* Places it above the background */
+  color: white;
+  text-align: center;
+  margin: 10px auto 0;
+  width: 80%;
+  max-width: 900px;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.6);
+}
   .home-container {
     position: relative;
     width: 100%;
