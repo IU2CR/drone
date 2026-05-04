@@ -1,33 +1,54 @@
-import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
+
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar"; // Import the new NavBar component
-import "./styles.css"; // Main styles
 
+import "./styles.css";
 
 const App = () => {
+  const scrollToTop = () => {
+    document.getElementById("home")?.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
-    
-    
-    <Router>
+    <>
+      <NavBar />
+
+      <div className="background-container"></div>
+
+      <div className="scroll-container">
+        <section id="home">
+          <Home />
+        </section>
+
+        <section id="services">
+          <Services />
+        </section>
+
+        <section id="about">
+          <About />
+        </section>
+
+        <section id="contact">
+          <Contact />
+        </section>
+        <section id="footer">
+    <Footer />
+  </section>
+      </div>
+
+      {/* BACK TO TOP BUTTON */}
+      <button className="scroll-top-btn" onClick={scrollToTop}>
+        ↑
+      </button>
       
-       <NavBar /> {/* Responsive Navbar */}
-       <div className="background-container">  {/* Background wrapper */}
-       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-      
-      <Footer /> {/* Footer at the bottom */}
-    </Router>
-    
+    </>
   );
 };
 
-export default App;
+export default App

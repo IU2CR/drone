@@ -1,29 +1,47 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import "./NavBar.css"; // Import styles for navbar
-import { FaBars, FaTimes } from "react-icons/fa"; // Icons for the hamburger menu
-
+import "./NavBar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const handleScroll = (id) => {
+    const section = document.getElementById(id);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+
+    setIsOpen(false);
+  };
+
   return (
     <nav className="navbar">
-       <Link to="/" className="logo" onClick={() => setIsOpen(false)}>
+      {/* Logo */}
+      <div
+        className="logo"
+        onClick={() => handleScroll("home")}
+        role="button"
+      >
         DroneForUA
-      </Link>
+      </div>
 
       {/* Hamburger Icon */}
-      <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>
+      <div
+        className="menu-icon"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         {isOpen ? <FaTimes /> : <FaBars />}
       </div>
 
       {/* Navigation Links */}
       <ul className={`nav-links ${isOpen ? "open" : ""}`}>
-        
-        <li><Link to="/services" onClick={() => setIsOpen(false)}>Donate</Link></li>
-        <li><Link to="/about" onClick={() => setIsOpen(false)}>Production</Link></li>
-        <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        <li onClick={() => handleScroll("services")}>Donate</li>
+        <li onClick={() => handleScroll("about")}>Production</li>
+        <li onClick={() => handleScroll("contact")}>Contact</li>
       </ul>
     </nav>
   );
