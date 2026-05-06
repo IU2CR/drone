@@ -60,13 +60,16 @@ const Home = () => {
             </a>
             <span className="news-source">— Forbes, Feb 18, 2025, 08:31am EST</span>
           </motion.div>
-
+            <motion.h1
+              className="home-title"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                                                    >
+                Drone For UA
+            </motion.h1>
             <div className="home-text">
-            <h1 className="home-title">
-              
-              Drone For UA
             
-              </h1>
 
             <p>
               

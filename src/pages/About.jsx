@@ -4,6 +4,7 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { motion } from "framer-motion";
 
 import aboutImage1 from "../pictures/about1.jpeg";
 import aboutImage2 from "../pictures/about2.jpeg";
@@ -16,7 +17,16 @@ const About = () => {
     <div className="about-wrapper">
 
       {/* TEXT SIDE */}
-      <h1 className="about-left h1"> Production</h1>
+      
+      <motion.h1
+            className="about-title h1"
+            initial={{ opacity: 0, y: 40 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.5 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+            Production
+          </motion.h1>
       <div className="about-text">
         
         <p>

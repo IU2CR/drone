@@ -30,6 +30,10 @@
   flex-direction: column;
   justify-content: center;
 }
+.service-title h1 {
+  position: relative;
+  color: white
+}
 
 /* TITLE */
 .services-right h2 {

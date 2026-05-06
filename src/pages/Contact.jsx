@@ -1,13 +1,22 @@
 import React from "react";
 import "./Contact.css";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div className="contact-section">
 
       {/* TITLE */}
-      <h1>Contact Us</h1>
-
+      
+      <motion.h1
+            className="contact-title h1"
+            initial={{ opacity: 0, y: 40 }}
+           whileInView={{ opacity: 1, y: 0 }}
+           viewport={{ once: true, amount: 0.5 }}
+           transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+            Contact Us
+          </motion.h1>
       {/* CONTACT INFO */}
       <div className="contact-info">
 
