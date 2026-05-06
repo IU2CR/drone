@@ -41,7 +41,7 @@ const Home = () => {
             >
               Western countries must keep military aid flowing to Ukraine
             </a>
-            <span className="news-source">— The Guardian</span>
+            <span className="news-source">— Keir Starmer, The Guardian, Mon 3 Mar 2025 18:21 GMT</span>
           </motion.div>
 
           <motion.div
@@ -58,7 +58,7 @@ const Home = () => {
             >
               Drones reshaping battlefield outcomes
             </a>
-            <span className="news-source">— Forbes</span>
+            <span className="news-source">— Forbes, Feb 18, 2025, 08:31am EST</span>
           </motion.div>
 
             <div className="home-text">
