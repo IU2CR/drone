@@ -22,12 +22,17 @@ const NavBar = () => {
     <nav className="navbar">
       {/* Logo */}
       <div
-        className="logo"
-        onClick={() => handleScroll("home")}
-        role="button"
-      >
-        DroneForUA
-      </div>
+  className="logo"
+  onClick={() => handleScroll("home")}
+  role="button"
+>
+  <img
+    src={`${process.env.PUBLIC_URL}/favicon.ico`}
+    alt="logo"
+    className="logo-icon"
+  />
+  DroneForUA
+</div>
 
       {/* Hamburger Icon */}
       <div

@@ -1,30 +1,54 @@
 /* =========================
-   NAVBAR CONTAINER
+   NAVBAR CONTAINER (GLASS BOX)
 ========================= */
 .navbar {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
 
-  width: 100%;
+  width: calc(100% - 40px);
+  max-width: 1200px;
+
   height: 70px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  background: #333;
-  padding: 0 20px;
+  padding: 0 25px;
+
+  background: rgba(51, 51, 51, 0.6);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
 
   color: white;
   z-index: 1000;
+
   box-sizing: border-box;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+
+  transition: all 0.3s ease;
 }
+
+/* subtle hover lift */
+.navbar:hover {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
 
 /* =========================
    LOGO
 ========================= */
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
   font-size: 1.5rem;
   font-weight: bold;
 
@@ -36,10 +60,17 @@
   transition: all 0.3s ease;
 }
 
+.logo-icon {
+  height: 1.1em;
+  width: auto;
+  display: block;
+}
+
 .logo:hover {
   color: #f4a261;
   transform: translateY(-2px);
 }
+
 
 /* =========================
    DESKTOP LINKS
@@ -54,7 +85,7 @@
   padding: 0;
 }
 
-/* ITEMS (IMPORTANT FIX HERE) */
+/* ITEMS */
 .nav-links li {
   padding: 8px 12px;
 
@@ -65,16 +96,14 @@
   transition: all 0.3s ease;
 }
 
-/* 🔥 HOVER NOW WORKS (FIXED FOR YOUR JSX) */
+/* HOVER EFFECT */
 .nav-links li:hover {
   color: #f4a261;
-
   background: rgba(244, 162, 97, 0.15);
-
   transform: translateY(-2px);
-
   box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
 }
+
 
 /* =========================
    HAMBURGER ICON
@@ -95,6 +124,7 @@
   transform: scale(1.1);
 }
 
+
 /* =========================
    MOBILE MENU
 ========================= */
@@ -106,12 +136,13 @@
 
   .nav-links {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 0;
 
     width: 100%;
 
-    background: #444;
+    background: rgba(68, 68, 68, 0.85);
+    backdrop-filter: blur(10px);
 
     flex-direction: column;
     text-align: center;
@@ -119,6 +150,8 @@
     display: none;
 
     padding: 10px 0;
+
+    border-radius: 12px;
   }
 
   .nav-links.open {
@@ -129,7 +162,6 @@
     padding: 15px 0;
   }
 
-  /* MOBILE HOVER (touch-friendly effect) */
   .nav-links li:hover {
     background: rgba(244, 162, 97, 0.25);
   }

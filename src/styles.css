@@ -25,10 +25,12 @@ body {
   overflow-x: hidden;
 
   scroll-snap-type: y mandatory;
+
+  position: relative;
 }
 
 /* =========================
-   EACH PAGE SECTION
+   EACH PAGE SECTION (CENTERED SYSTEM)
 ========================= */
 section {
   min-height: 100vh;
@@ -41,9 +43,8 @@ section {
 
   display: flex;
 
-  /* 🔥 KEY CHANGE */
-  justify-content: flex-start;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
 
   padding: 70px 40px 40px;
 
@@ -51,11 +52,13 @@ section {
 }
 
 /* =========================
-   PREVENT CONTENT OVERFLOW
+   CONTENT WRAPPER (CENTERS ALL CONTENT)
 ========================= */
 section > * {
   width: 100%;
   max-width: 1200px;
+
+  margin: 0 auto;
 }
 
 /* =========================
@@ -113,7 +116,7 @@ img, video, iframe {
 }
 
 /* =========================
-   MOBILE FIX
+   MOBILE FIX (NO OVERLAP)
 ========================= */
 @media screen and (max-width: 768px) {
 
@@ -126,11 +129,12 @@ img, video, iframe {
     flex-direction: column;
 
     justify-content: flex-start;
-    align-items: flex-start; /* 🔥 IMPORTANT */
+    align-items: center;
   }
 
   section > * {
     width: 100%;
+    margin: 0 auto;
   }
 
   .scroll-container {

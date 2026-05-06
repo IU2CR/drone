@@ -12,7 +12,17 @@ const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-content">
-
+        <h1 className="home-title">
+              
+              Drone For UA
+            
+              </h1>
+        <ul className="footer-links">
+          <li><button onClick={() => scrollTo("home")}>Home</button></li>
+          <li><button onClick={() => scrollTo("services")}>Donate</button></li>
+          <li><button onClick={() => scrollTo("about")}>Production</button></li>
+          <li><button onClick={() => scrollTo("contact")}>Contact</button></li>
+        </ul>
         <ul className="footer-contact">
           <li><strong>📍 Address:</strong> Greenside House, 50 Station Rd, London N22 7DE, UK</li>
           <li><strong>📞 Phone:</strong> <a href="tel:+447404584064">+447404584064</a></li>

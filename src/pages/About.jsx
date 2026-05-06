@@ -1,48 +1,66 @@
 import "./About.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
 import aboutImage1 from "../pictures/about1.jpeg";
 import aboutImage2 from "../pictures/about2.jpeg";
 import aboutImage3 from "../pictures/about3.jpeg";
+import aboutImage4 from "../pictures/about4.jpeg";
+import aboutImage5 from "../pictures/about5.jpeg";
 
 const About = () => {
   return (
-    <div className="about-section">
+    <div className="about-wrapper">
 
       {/* TEXT SIDE */}
+      <h1 className="about-left h1"> Production</h1>
       <div className="about-text">
-        <h2>Production</h2>
-
+        
         <p>
-          Drone For UA is a committed fundraising initiative dedicated to
-          strengthening Ukraine’s defense by facilitating the production of
-          cutting-edge drones. Through collective contributions, we provide
-          Ukrainian forces with UAV technology for reconnaissance, security,
-          and humanitarian efforts.
+          Drone For UA is a fundraising initiative supporting Ukraine’s defense
+          through advanced UAV production for reconnaissance, security and humanitarian missions.
         </p>
       </div>
 
-      {/* IMAGE GRID SIDE */}
-      <div className="about-images">
+      {/* SLIDESHOW SIDE */}
+      <div className="about-slider">
 
-        <div className="image-card">
-          <img src={aboutImage2} alt="Recon drone" />
-          <div className="hover-text">
-            This drone is used for reconnaissance missions.
-          </div>
-        </div>
+        <Swiper
+           modules={[Autoplay, Navigation, Pagination]}
+             autoplay={{ delay: 3000 }}
+            navigation
+            pagination={{ clickable: true }}
+        >
 
-        <div className="image-card">
-          <img src={aboutImage1} alt="Production" />
-          <div className="hover-text">
-            Mass production of drones at scale.
-          </div>
-        </div>
+          <SwiperSlide>
+            <img src={aboutImage1} alt="Production" />
+            <p>Mass drone production at scale</p>
+          </SwiperSlide>
 
-        <div className="image-card">
-          <img src={aboutImage3} alt="Advanced tech" />
-          <div className="hover-text">
-            Advanced navigation and night vision tech.
-          </div>
-        </div>
+          <SwiperSlide>
+            <img src={aboutImage2} alt="Recon" />
+            <p>Team work in complex tasks</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={aboutImage3} alt="Technology" />
+            <p>Testing before flight</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={aboutImage4} alt="Technology" />
+            <p>Diferent modification of UAV</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={aboutImage5} alt="Technology" />
+            <p>Final Dispatching</p>
+          </SwiperSlide>
+
+        </Swiper>
 
       </div>
 

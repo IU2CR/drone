@@ -60,11 +60,16 @@ const Home = () => {
             </a>
             <span className="news-source">— Forbes</span>
           </motion.div>
-          
+
             <div className="home-text">
-            <h1 className="home-title">Drone For UA</h1>
+            <h1 className="home-title">
+              
+              Drone For UA
+            
+              </h1>
 
             <p>
+              
               Drone For UA is a fundraising initiative supporting Ukraine’s defense
               through drone production for reconnaissance, defense, and humanitarian missions.
             </p>
