@@ -10,7 +10,9 @@ import aboutImage1 from "../pictures/about1.jpeg";
 import aboutImage2 from "../pictures/about2.jpeg";
 import aboutImage3 from "../pictures/about3.jpeg";
 import aboutImage4 from "../pictures/about4.jpeg";
-import aboutImage5 from "../pictures/about5.jpeg";
+import aboutImage5 from "../pictures/about5.mp4";
+import aboutImage6 from "../pictures/about6.jpeg";
+import aboutImage7 from "../pictures/about7.jpeg";
 
 const About = () => {
   return (
@@ -65,10 +67,30 @@ const About = () => {
             <p>Diferent modification of UAV</p>
           </SwiperSlide>
 
+
+           {/* VIDEO SLIDE */}
           <SwiperSlide>
-            <img src={aboutImage5} alt="Technology" />
+            <video
+              src={aboutImage5}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+            <p>Testing</p>
+          </SwiperSlide>
+      
+
+          <SwiperSlide>
+            <img src={aboutImage6} alt="Technology" />
+            <p>Ready for packing</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={aboutImage7} alt="Technology" />
             <p>Final Dispatching</p>
           </SwiperSlide>
+
 
         </Swiper>
 
