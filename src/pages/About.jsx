@@ -13,6 +13,7 @@ import aboutImage4 from "../pictures/about4.jpeg";
 import aboutImage5 from "../pictures/about5.mp4";
 import aboutImage6 from "../pictures/about6.jpeg";
 import aboutImage7 from "../pictures/about7.jpeg";
+import aboutImage8 from "../pictures/about8.jpeg";
 
 const About = () => {
   return (
@@ -89,6 +90,11 @@ const About = () => {
           <SwiperSlide>
             <img src={aboutImage7} alt="Technology" />
             <p>Final Dispatching</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <img src={aboutImage8} alt="Technology" />
+            <p>Logo</p>
           </SwiperSlide>
 
 
