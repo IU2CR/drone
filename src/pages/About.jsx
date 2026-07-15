@@ -57,7 +57,7 @@ const About = () => {
 
           <SwiperSlide>
             <img src={aboutImage01} alt="Production" />
-            <p>Presenation</p>
+            <p>Presentation</p>
           </SwiperSlide>
 
           <SwiperSlide>
