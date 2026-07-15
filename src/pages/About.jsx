@@ -6,6 +6,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
 
+import aboutImage0 from "../pictures/about0.jpeg";
+import aboutImage01 from "../pictures/about01.jpeg";
 import aboutImage1 from "../pictures/about1.jpeg";
 import aboutImage2 from "../pictures/about2.jpeg";
 import aboutImage3 from "../pictures/about3.jpeg";
@@ -13,7 +15,7 @@ import aboutImage4 from "../pictures/about4.jpeg";
 import aboutImage5 from "../pictures/about5.mp4";
 import aboutImage6 from "../pictures/about6.jpeg";
 import aboutImage7 from "../pictures/about7.jpeg";
-import aboutImage8 from "../pictures/about8.jpeg";
+import aboutImage8 from "../pictures/about8.jpg";
 
 const About = () => {
   return (
@@ -47,6 +49,16 @@ const About = () => {
             navigation
             pagination={{ clickable: true }}
         >
+          <SwiperSlide>
+            <img src={aboutImage0} alt="Production" />
+            <p>Clockwise</p>
+          </SwiperSlide>
+
+
+          <SwiperSlide>
+            <img src={aboutImage01} alt="Production" />
+            <p>Presenation</p>
+          </SwiperSlide>
 
           <SwiperSlide>
             <img src={aboutImage1} alt="Production" />
