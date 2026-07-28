@@ -34,6 +34,11 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
+            <img
+              className="news-favicon"
+              src="https://www.google.com/s2/favicons?domain=theguardian.com&sz=64"
+               alt="The Guardian"
+            />
             <a
               href="https://www.theguardian.com/politics/2025/mar/03/western-countries-must-keep-military-aid-flowing-to-ukraine-starmer-warns"
               target="_blank"
@@ -51,6 +56,12 @@ const Home = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
+            <img
+            className="news-favicon"
+            src="https://www.google.com/s2/favicons?domain=forbes.com&sz=64"
+             alt="Forbes"
+            />
+
             <a
               href="https://www.forbes.com/sites/davidhambling/2025/02/18/new-report-drones-now-destroying-two-thirds-of-russian-targets/"
               target="_blank"

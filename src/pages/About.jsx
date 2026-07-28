@@ -8,6 +8,7 @@ import { motion } from "framer-motion";
 
 import aboutImage0 from "../pictures/about0.jpeg";
 import aboutImage01 from "../pictures/about01.jpeg";
+import aboutImage0101 from "../pictures/about0101.jpeg";
 import aboutImage1 from "../pictures/about1.jpeg";
 import aboutImage2 from "../pictures/about2.jpeg";
 import aboutImage3 from "../pictures/about3.jpeg";
@@ -61,6 +62,11 @@ const About = () => {
           </SwiperSlide>
 
           <SwiperSlide>
+            <img src={aboutImage0101} alt="Production" />
+            <p>Presentation</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
             <img src={aboutImage1} alt="Production" />
             <p>Mass drone production at scale</p>
           </SwiperSlide>
@@ -77,7 +83,7 @@ const About = () => {
 
           <SwiperSlide>
             <img src={aboutImage4} alt="Technology" />
-            <p>Diferent modification of UAV</p>
+            <p>Different modification of UAV</p>
           </SwiperSlide>
 
 
