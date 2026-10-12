@@ -26,7 +26,33 @@ const Home = () => {
 
         {/* BOTTOM AREA (SLOGANS) */}
         <div className="slogan-container">
+              <motion.h1
+              className="home-title"
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
+                                                    >
+                <span className="title-line">Drone For</span>
+                <span className="title-line highlight-ukraine">Ukraine</span>
+              </motion.h1>
+            <div className="home-text">
 
+            <p>       
+          
+          Supporting Ukraine’s technological sovereignty by uniting global expert news, field developments, and professional technical education for the next generation of UAV Systems Engineers.
+            </p>
+             <button
+              className="apply-button"
+              onClick={() =>
+                document.getElementById("contact")?.scrollIntoView({
+                  behavior: "smooth",
+                })
+              }
+            >
+              Apply for UAV Systems Engineer Course →
+            </button>
+          </div>
+          
           <motion.div
             className="slogan"
             initial={{ opacity: 0, y: 25 }}
@@ -71,23 +97,7 @@ const Home = () => {
             </a>
             <span className="news-source">— Forbes, Feb 18, 2025, 08:31am EST</span>
           </motion.div>
-            <motion.h1
-              className="home-title"
-              initial={{ opacity: 0, y: 40, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
-                                                    >
-                Drone For UA
-            </motion.h1>
-            <div className="home-text">
             
-
-            <p>
-              
-              Drone For UA is a fundraising initiative supporting Ukraine’s defense
-              through drone production for reconnaissance, defense, and humanitarian missions.
-            </p>
-          </div>
         </div>
 
       </div>

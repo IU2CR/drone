@@ -31,7 +31,7 @@ const NavBar = () => {
     alt="logo"
     className="logo-icon"
   />
-  DroneForUA
+  Drone For Ukraine
 </div>
 
       {/* Hamburger Icon */}

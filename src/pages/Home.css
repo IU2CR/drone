@@ -8,11 +8,22 @@
   overflow: hidden;
   color: white
 }
-.home-title h1 {
-  position: relative;
-  color: white
+.home-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.05;
+  margin-bottom: 10px;
 }
 
+.title-line {
+  display: block;
+}
+
+.highlight-ukraine {
+  color: #f28136;
+}
 
 /* =========================
    🌄 BACKGROUND LAYER
@@ -99,23 +110,25 @@
 ========================= */
 .home-text {
   position: relative;
+  z-index: 2;
 
   color: white;
   text-align: center;
 
-  margin: 20px auto 0;
-  width: 80%;
+  width: 100%;
   max-width: 900px;
+  box-sizing: border-box;
+  margin: 20px auto 0;
 
   font-size: 1rem;
   line-height: 1.6;
+  overflow-wrap: break-word;
 
-  background: rgba(0,0,0,0.6);
-  padding: 12px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 16px;
   border-radius: 10px;
 
-  box-shadow: 0px 8px 25px rgba(0,0,0,0.4);
-  
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 .home-overlay {
   position: fixed;
@@ -152,4 +165,65 @@
   object-fit: cover;
   vertical-align: middle;
   margin-right: 8px;
+}
+```css
+.apply-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px 26px;
+  margin-top: 25px;
+
+  background: #f28136;
+  color: #101820;
+  border: 2px solid #f28136;
+  border-radius: 6px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1.5;
+
+  cursor: pointer;
+  box-shadow: 0 5px 18px rgba(242, 129, 54, 0.2);
+  transition: all 0.3s ease;
+}
+
+.apply-button:hover {
+  background: transparent;
+  color: #f28136;
+  box-shadow: 0 8px 25px rgba(242, 129, 54, 0.3);
+  transform: translateY(-3px);
+}
+
+.apply-button:active {
+  transform: translateY(0);
+}
+
+.apply-button:focus-visible {
+  outline: 3px solid white;
+  outline-offset: 4px;
+}
+
+@media (max-width: 600px) {
+  .apply-button {
+    width: 100%;
+    padding: 14px 18px;
+    font-size: 13px;
+  }
+}
+@media (max-width: 600px) {
+  .home-text {
+    width: 100%;
+    margin: 15px auto 0;
+    padding: 12px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    border-radius: 8px;
+  }
 }
